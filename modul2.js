@@ -21,7 +21,7 @@ function getFinalAmount(startAmount, additional, percent, month, days) {
         return NaN;
     } else {
         for (i = 0; i < month; i++) {
-            startAmount = startAmount * percent / 100 + startAmount + additional;
+            startAmount = startAmount * percent / 1200 + startAmount + additional;
         }
         return startAmount;
     }
