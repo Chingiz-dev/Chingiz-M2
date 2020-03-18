@@ -19,6 +19,7 @@ function getFinalAmount(startAmount, additional, percent, month) {
 }
 
 function startOnButtonClick() {
+    errorHTML.className = "dont-show-error";
     console.clear();
     let startAmount = +startAmountHTML.value;
     let additional = +additionalHTML.value;
