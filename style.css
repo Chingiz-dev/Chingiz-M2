@@ -5,16 +5,19 @@ body {
 .main-container {
     margin: auto;
     max-width: 900px;
-    min-width: 500px;
+    min-width: 550px;
     padding: 100px;
 }
 
 section {
     display: flex;
     justify-content: space-between;
-    padding: 5px 0px;
+    margin: 5px 0px;
     font-size: large;
-    height: 30px;
+    height: 50px;
+}
+.prompt {
+    margin-top: auto;
 }
 
 button {

@@ -1,4 +1,4 @@
-function getFinalAmount(startAmount, additional, percent, month) {
+function getFinalAmount(startAmount, additional, percent, month, days) {
 
     if (startAmount <= 0 || startAmountHTML == NaN) {
         errorStart.className = "show-error";
@@ -15,13 +15,11 @@ function getFinalAmount(startAmount, additional, percent, month) {
         console.log('percent is incorrect');
         return NaN;
     }
-    else if (month < 0 || month == NaN ||
-        (!(month % 2 == 0 || month % 2 == 1))) {
+    else if (days <= 0 || days == NaN || (!(days % 2 == 0 || days % 2 == 1))) {
         errorDays.className = "show-error";
         console.log('days is incorrect');
         return NaN;
     } else {
-
         for (i = 0; i < month; i++) {
             startAmount = startAmount * percent / 100 + startAmount + additional;
         }
@@ -35,24 +33,22 @@ function startOnButtonClick() {
     errorPercent.className = "dont-show-error";
     errorDays.className = "dont-show-error";
     console.clear();
+
     let startAmount = +startAmountHTML.value;
     let additional = +additionalHTML.value;
     let percent = +percentHTML.value;
     let days = +daysHTML.value;
     let month = Math.floor(days / 30);
 
-    let result = getFinalAmount(startAmount, additional, percent, month);
+    let result = getFinalAmount(startAmount, additional, percent, month, days);
     if (!isNaN(result)) {
         alert(result);
     }
 }
 
 let startAmountHTML = document.getElementById("input-start-amount");
-
 let additionalHTML = document.getElementById("input-additional");
-
 let percentHTML = document.getElementById("input-percent");
-
 let daysHTML = document.getElementById("input-days");
 
 let errorStart = document.getElementById("error-notification-start");
@@ -61,9 +57,4 @@ let errorPercent = document.getElementById("error-notification-percent");
 let errorDays = document.getElementById("error-notification-days");
 
 let buttonHTML = document.getElementById("start-calculate");
-
 buttonHTML.addEventListener("click", startOnButtonClick);
-
-
-
-
