@@ -1,0 +1,37 @@
+body {
+    font-family: 'Noto Sans JP', 'Heebo', 'Roboto', sans-serif;
+}
+
+.main-container {
+    margin: auto;
+    max-width: 900px;
+    min-width: 500px;
+    padding: 100px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    font-size: large;
+    height: 30px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-size: large;
+    border-radius: 4px;
+    border: 0px;
+    height: 30px;
+}
+
+.dont-show-error {
+    display: none;
+}
+
+.show-error {
+    display: block;
+}

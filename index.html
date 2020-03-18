@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>
+        Modul-2
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Noto+Sans+JP|Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+
+    <div class="main-container">
+
+        <header>
+            <h1>Калькулятор расчета банковского вклада, с капитализацией и пополнением.</h1>
+        </header>
+
+        <div class="text-and-prompt">
+            <section>
+                <div class="text">Начальная сумма вклада (₽)</div>
+                <div class="prompt"><input type="number" name="" id="input-start-amount" /></div>
+            </section>
+
+            <section>
+                <div class="text">Сумма ежемесячного пополнения (₽)</div>
+                <div class="prompt"><input type="number" name="" id="input-additional" /></div>
+            </section>
+
+            <section>
+                <div class="text">Процентная ставка (%)</div>
+                <div class="prompt"><input type="number" name="" id="input-percent" /></div>
+            </section>
+
+            <section>
+                <div class="text">Срок вклада (дней)</div>
+                <div class="prompt"><input type="number" name="" id="input-days" /></div>
+            </section>
+        </div>
+
+        <footer>
+            <button id="start-calculate">Рассчитать</button>
+            <div id="error-notification" class="dont-show-error">Ошибка ввода</div>
+        </footer>
+    </div>
+
+    <script src="modul2.js"></script>
+</body>
+
+</html>
