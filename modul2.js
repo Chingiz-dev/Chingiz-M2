@@ -1,15 +1,26 @@
 function getFinalAmount(startAmount, additional, percent, month) {
 
-    if (startAmount <= 0 || startAmountHTML == NaN ||
-        additional < 0 || additional == 'NaN' ||
-        percent <= 0 || percent > 100 || percent == NaN ||
-        month < 0 || month == NaN ||
-        (!(month % 2 == 0 || month % 2 == 1))) {
-        errorHTML.className = "show-error";
-        console.log('error');
+    if (startAmount <= 0 || startAmountHTML == NaN) {
+        errorStart.className = "show-error";
+        console.log('start amount is incorrect');
         return NaN;
     }
-    else {
+    else if (additional < 0 || additional == 'NaN') {
+        errorAdditional.className = "show-error";
+        console.log('additional amount is incorrect');
+        return NaN;
+    }
+    else if (percent <= 0 || percent > 100 || percent == NaN) {
+        errorPercent.className = "show-error";
+        console.log('percent is incorrect');
+        return NaN;
+    }
+    else if (month < 0 || month == NaN ||
+        (!(month % 2 == 0 || month % 2 == 1))) {
+        errorDays.className = "show-error";
+        console.log('days is incorrect');
+        return NaN;
+    } else {
 
         for (i = 0; i < month; i++) {
             startAmount = startAmount * percent / 100 + startAmount + additional;
@@ -19,7 +30,10 @@ function getFinalAmount(startAmount, additional, percent, month) {
 }
 
 function startOnButtonClick() {
-    errorHTML.className = "dont-show-error";
+    errorStart.className = "dont-show-error";
+    errorAdditional.className = "dont-show-error";
+    errorPercent.className = "dont-show-error";
+    errorDays.className = "dont-show-error";
     console.clear();
     let startAmount = +startAmountHTML.value;
     let additional = +additionalHTML.value;
@@ -41,7 +55,10 @@ let percentHTML = document.getElementById("input-percent");
 
 let daysHTML = document.getElementById("input-days");
 
-let errorHTML = document.getElementById("error-notification");
+let errorStart = document.getElementById("error-notification-start");
+let errorAdditional = document.getElementById("error-notification-additional");
+let errorPercent = document.getElementById("error-notification-percent");
+let errorDays = document.getElementById("error-notification-days");
 
 let buttonHTML = document.getElementById("start-calculate");
 
