@@ -2,22 +2,22 @@ function getFinalAmount(startAmount, additional, percent, month, days) {
 
     if (startAmount <= 0 || startAmountHTML == NaN) {
         errorStart.className = "show-error";
-        console.log('start amount is incorrect');
+        console.error('start amount is incorrect');
         return NaN;
     }
     else if (additional < 0 || additional == 'NaN') {
         errorAdditional.className = "show-error";
-        console.log('additional amount is incorrect');
+        console.error('additional amount is incorrect');
         return NaN;
     }
     else if (percent <= 0 || percent > 100 || percent == NaN) {
         errorPercent.className = "show-error";
-        console.log('percent is incorrect');
+        console.error('percent is incorrect');
         return NaN;
     }
     else if (days <= 0 || days == NaN || (!(days % 2 == 0 || days % 2 == 1))) {
         errorDays.className = "show-error";
-        console.log('days is incorrect');
+        console.error('days is incorrect');
         return NaN;
     } else {
         for (i = 0; i < month; i++) {
