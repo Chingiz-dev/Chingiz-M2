@@ -11,43 +11,54 @@
 </head>
 
 <body>
-    <div class="main-container">
+        <div class="main-container">
 
-        <header>
-            <h1>Калькулятор расчета банковского вклада, с капитализацией и пополнением.</h1>
-        </header>
+            <header>
+                <h1>Калькулятор расчета банковского вклада, с капитализацией и пополнением.</h1>
+            </header>
 
-        <div class="text-and-prompt">
-            <section>
-                <div class="text"><h3>Начальная сумма вклада (₽)</h3></div>
-                <div class="prompt"><input type="number" id="input-start-amount" placeholder="Начальная сумма"/></div>
-            </section>
+            <div class="text-and-prompt">
+                <section>
+                    <div class="text">
+                        <h3>Начальная сумма вклада (₽)</h3>
+                    </div>
+                    <div class="prompt"><input type="number" id="input-start-amount" placeholder="Начальная сумма" />
+                    </div>
+                </section>
 
-            <section>
-                <div class="text"><h3>Сумма ежемесячного пополнения (₽)</h3></div>
-                <div class="prompt"><input type="number" id="input-additional" placeholder="Сумма пополнения"/></div>
-            </section>
+                <section>
+                    <div class="text">
+                        <h3>Сумма ежемесячного пополнения (₽)</h3>
+                    </div>
+                    <div class="prompt"><input type="number" id="input-additional" placeholder="Сумма пополнения" />
+                    </div>
+                </section>
 
-            <section>
-                <div class="text"><h3>Процентная ставка (%)</h3></div>
-                <div class="prompt"><input type="number" id="input-percent" placeholder="Процентная ставка" /></div>
-            </section>
+                <section>
+                    <div class="text">
+                        <h3>Процентная ставка (%)</h3>
+                    </div>
+                    <div class="prompt"><input type="number" id="input-percent" placeholder="Процентная ставка" /></div>
+                </section>
 
-            <section>
-                <div class="text"><h3>Срок вклада (дней)</h3></div>
-                <div class="prompt"><input type="number" id="input-days" placeholder="Сроки вклада"/></div>
-            </section>
+                <section>
+                    <div class="text">
+                        <h3>Срок вклада (дней)</h3>
+                    </div>
+                    <div class="prompt"><input type="number" id="input-days" placeholder="Сроки вклада" /></div>
+                </section>
+            </div>
+
+            <footer>
+                <button id="start-calculate">Рассчитать</button>
+                <div id="error-notification-start" class="dont-show-error">Ошибка ввода начальной суммы</div>
+                <div id="error-notification-additional" class="dont-show-error">Ошибка ввода ежемесячного пополнения
+                </div>
+                <div id="error-notification-percent" class="dont-show-error">Ошибка ввода процентной ставки</div>
+                <div id="error-notification-days" class="dont-show-error">Ошибка ввода срока вклада</div>
+            </footer>
         </div>
-
-        <footer>
-            <button id="start-calculate">Рассчитать</button>
-            <div id="error-notification-start" class="dont-show-error">Ошибка ввода начальной суммы</div>
-            <div id="error-notification-additional" class="dont-show-error">Ошибка ввода ежемесячного пополнения</div>
-            <div id="error-notification-percent" class="dont-show-error">Ошибка ввода процентной ставки</div>
-            <div id="error-notification-days" class="dont-show-error">Ошибка ввода срока вклада</div>
-        </footer>
-    </div>
-
     <script src="modul2.js"></script>
 </body>
+
 </html>
