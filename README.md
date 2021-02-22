@@ -1,4 +1,4 @@
 # Chingiz-M2
-Второй проект на BOOTCAMP
+Онлайн калькулятор депозитных вкладов
 
 https://chingiz-dev.github.io/Chingiz-M2/
